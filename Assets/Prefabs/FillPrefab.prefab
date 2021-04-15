@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 9056246709851128328}
   - component: {fileID: 9056246709851128329}
   - component: {fileID: 9056246709851128334}
+  - component: {fileID: 6264220804417847165}
+  - component: {fileID: -8705415983617024684}
   m_Layer: 5
   m_Name: FillPrefab
   m_TagString: Untagged
@@ -120,7 +122,47 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 9056246709851128329}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: -8705415983617024684}
+        m_TargetAssemblyTypeName: ButtonColorChange, Assembly-CSharp
+        m_MethodName: ChangeButtonColor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &6264220804417847165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9056246709851128332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dbea0372c3034046ac784cecebbbaaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value: 0
+  valueDisplay: {fileID: 9056246710699061025}
+--- !u!114 &-8705415983617024684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9056246709851128332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 477f3118af88eae489f0bd82ea33ec00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wantedColor: {r: 0, g: 0, b: 0, a: 1}
+  image: {fileID: 9056246709851128329}
 --- !u!1 &9056246710699061031
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class Fill2048 : MonoBehaviour
 {
 
-    int value;
+    public int value;
     
     [SerializeField] Text valueDisplay;
 
