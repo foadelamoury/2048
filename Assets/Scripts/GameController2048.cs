@@ -7,13 +7,17 @@ public class GameController2048 : MonoBehaviour
 {
     [SerializeField] GameObject fillPrefab;
     [SerializeField] Transform[] allCells;
-
+    public static int countCellsFilled=0;
     public static Action<string> slide;
 
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("SpawnFill", 2.0f, 0.3f);
+        if (countCellsFilled<16)
+        {
+            InvokeRepeating("SpawnFill", 2.0f, 0.3f);
+
+        }
 
     }
 
@@ -51,8 +55,14 @@ public class GameController2048 : MonoBehaviour
         int whichSpawn = UnityEngine.Random.Range(0, allCells.Length);
         if (allCells[whichSpawn].childCount !=0)
         {
-            SpawnFill();
-            Debug.Log(allCells[whichSpawn].name + " is already is filled");
+            countCellsFilled++;
+            if (countCellsFilled < 16)
+            {
+                SpawnFill();
+            
+
+            Debug.Log(allCells[whichSpawn].name + " is already filled");
+            }
             return;
         }
         float chance = UnityEngine.Random.Range(0f, 1f);

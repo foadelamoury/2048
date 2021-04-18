@@ -6,13 +6,17 @@ using UnityEngine.UI;
 
 public class ButtonColorChange : MonoBehaviour
 {
-    public Color wantedColor;
-    public Image image;
+    // public Color wantedColor;
+    // public Image image;
 
-    public void ChangeButtonColor()
+    // public void ChangeButtonColor()
+    // {
+    //    
+    //      image.color = wantedColor;
+    //     
+    // }
+    public void DestroyGameObject()
     {
-       
-        image.color = wantedColor;
-        
+        Destroy(transform.gameObject);
     }
 }
