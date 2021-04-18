@@ -24,5 +24,7 @@ public class ButtonColorChange : MonoBehaviour
         
         Debug.Log("the color of the box  is " + boxImage.color);
         Destroy(transform.gameObject);
+        GameController2048.countCellsFilled--;
+        
     }
 }

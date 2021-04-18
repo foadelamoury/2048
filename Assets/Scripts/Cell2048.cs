@@ -15,6 +15,7 @@ public class Cell2048 : MonoBehaviour
     
         private void OnEnable()
         {
+            
             GameController2048.slide += OnSlide;
         }
         private void OnDisable()
