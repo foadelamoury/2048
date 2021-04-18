@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Cell2048 : MonoBehaviour
 {
+    
     public Cell2048 right;
     public Cell2048 left;
     public Cell2048 up;
@@ -76,6 +77,7 @@ public class Cell2048 : MonoBehaviour
                     }
                 }
             }
+            
 
             else
             {

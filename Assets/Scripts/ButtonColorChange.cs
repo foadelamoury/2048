@@ -4,8 +4,11 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
+  
+
 public class ButtonColorChange : MonoBehaviour
 {
+    public static int  score;
     // public Color wantedColor;
     // public Image image;
 
@@ -15,10 +18,11 @@ public class ButtonColorChange : MonoBehaviour
     //      image.color = wantedColor;
     //     
     // }
+    
     public void DestroyGameObject()
     {   Image boxImage = gameObject.GetComponent<Image>();
         
         Debug.Log("the color of the box  is " + boxImage.color);
-        // Destroy(transform.gameObject);
+        Destroy(transform.gameObject);
     }
 }

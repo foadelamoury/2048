@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 public class GameController2048 : MonoBehaviour
 {
@@ -9,10 +11,14 @@ public class GameController2048 : MonoBehaviour
     [SerializeField] Transform[] allCells;
     public static int countCellsFilled=0;
     public static Action<string> slide;
-
+    Color[] colors = new Color[6];
     // Start is called before the first frame update
     void Start()
     {
+        colors[0] = Color.blue;
+        colors[1] = Color.red;
+        colors[2] = Color.green;
+        colors[3] = Color.yellow;
         if (countCellsFilled<16)
         {
             InvokeRepeating("SpawnFill", 2.0f, 0.3f);
@@ -66,7 +72,7 @@ public class GameController2048 : MonoBehaviour
             return;
         }
         float chance = UnityEngine.Random.Range(0f, 1f);
-        Debug.Log(chance);
+        // Debug.Log(chance);
         if (chance < .2f)
         {
             return;
@@ -77,6 +83,14 @@ public class GameController2048 : MonoBehaviour
             // Debug.Log(2);
             Fill2048 tempFillComp = tempFill.GetComponent<Fill2048>();
             allCells[whichSpawn].GetComponent <Cell2048>().fill = tempFillComp;
+            
+            
+            // changing the color of the cell 
+            Image tempFillImage = tempFill.GetComponent<Image>();
+            
+         
+            
+            tempFillImage.color = colors[Random.Range(0, colors.Length)];
             // tempFillComp.FillValueUpdate(2);
         }
         else
@@ -85,6 +99,14 @@ public class GameController2048 : MonoBehaviour
             // Debug.Log(4);
             Fill2048 tempFillComp = tempFill.GetComponent<Fill2048>();
             allCells[whichSpawn].GetComponent <Cell2048>().fill = tempFillComp;
+            
+            
+            // changing the color of the cell 
+            Image tempFillImage = tempFill.GetComponent<Image>();
+
+       
+            
+            tempFillImage.color = colors[Random.Range(0, colors.Length)];
             // tempFillComp.FillValueUpdate(4);
 
 
