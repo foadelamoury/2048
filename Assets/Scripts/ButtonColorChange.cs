@@ -16,7 +16,9 @@ public class ButtonColorChange : MonoBehaviour
     //     
     // }
     public void DestroyGameObject()
-    {
-        Destroy(transform.gameObject);
+    {   Image boxImage = gameObject.GetComponent<Image>();
+        
+        Debug.Log("the color of the box  is " + boxImage.color);
+        // Destroy(transform.gameObject);
     }
 }

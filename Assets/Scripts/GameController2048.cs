@@ -61,7 +61,7 @@ public class GameController2048 : MonoBehaviour
                 SpawnFill();
             
 
-            Debug.Log(allCells[whichSpawn].name + " is already filled");
+            // Debug.Log(allCells[whichSpawn].name + " is already filled"); to insure that the cell is filled 
             }
             return;
         }
@@ -74,7 +74,7 @@ public class GameController2048 : MonoBehaviour
         else if (chance < .8f)
         {
             GameObject tempFill = Instantiate(fillPrefab, allCells[whichSpawn]);
-            Debug.Log(2);
+            // Debug.Log(2);
             Fill2048 tempFillComp = tempFill.GetComponent<Fill2048>();
             allCells[whichSpawn].GetComponent <Cell2048>().fill = tempFillComp;
             // tempFillComp.FillValueUpdate(2);
@@ -82,7 +82,7 @@ public class GameController2048 : MonoBehaviour
         else
         {
             GameObject tempFill = Instantiate(fillPrefab, allCells[whichSpawn]);
-            Debug.Log(4);
+            // Debug.Log(4);
             Fill2048 tempFillComp = tempFill.GetComponent<Fill2048>();
             allCells[whichSpawn].GetComponent <Cell2048>().fill = tempFillComp;
             // tempFillComp.FillValueUpdate(4);
